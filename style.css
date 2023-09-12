@@ -1,0 +1,117 @@
+header {
+  display: flex;
+  align-items: center;
+  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  justify-content: center;
+  margin-bottom: 2em;
+  background: #000;
+  color: #fff;
+  min-height: 10vh;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul, ol {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-columns: 1fr;
+  grid-gap: 1em;
+  margin: 0 auto;
+  max-width: 64em;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 0;
+  font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.day {
+  font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.prices {
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0;
+}
+
+.currencies {
+  font-size: 0.7rem;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+ul.weekdays {
+  margin-bottom: 1em;
+}
+
+ul.weekdays li {
+  height: 4vw;
+}
+
+ol.day-grid li {
+  background-color: #ffeaf6;
+  border: 2px solid #e9259b;
+  border-radius: 5px;
+  height: 6vw;
+  max-height: 125px;
+}
+
+ul.weekdays abbr[title] {
+  border: none;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+ol.day-grid li:nth-child(1),
+ol.day-grid li:nth-child(2),
+ol.day-grid li:nth-child(3),
+ol.day-grid li:nth-child(34),
+ol.day-grid li:nth-child(35) {
+  background-color: #fff;
+}
+
+@media all and (max-width: 800px) {
+  ul, ol {
+    grid-gap: .25em;
+  }
+  
+  ul.weekdays li {
+    font-size: 0;
+  }
+  
+  ul.weekdays > li abbr:after {
+      content: attr(title);
+      font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
+    }
+    ol.day-grid li {
+      height: 12vw;
+      max-height: 125px;
+    }
+  .prices {
+    font-size: 0.7rem;
+  }
+  .currencies  {
+    font-size: 0.5rem;
+  }
+}
