@@ -60,6 +60,10 @@ li {
   display: inline-block;
 }
 
+.selected {
+  background-color: #edaad0;
+}
+
 ul.weekdays {
   margin-bottom: 1em;
 }
