@@ -60,10 +60,6 @@ li {
   display: inline-block;
 }
 
-.selected {
-  background-color: #edaad0;
-}
-
 ul.weekdays {
   margin-bottom: 1em;
 }
@@ -93,6 +89,13 @@ ol.day-grid li:nth-child(34),
 ol.day-grid li:nth-child(35) {
   background-color: #fff;
 }
+
+ol.day-grid li:nth-child(17),
+ol.day-grid li:nth-child(18),
+ol.day-grid li:nth-child(19) {
+  background-color: #edaad0;
+}
+
 
 @media all and (max-width: 800px) {
   ul, ol {
